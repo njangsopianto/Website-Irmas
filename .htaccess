@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Lindungi file konfigurasi
+<FilesMatch "\.(sql|md|json|lock)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

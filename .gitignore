@@ -1,0 +1,10 @@
+/vendor/
+composer.phar
+composer-setup.php
+.idea/
+.vscode/
+*.log
+assets/uploads/kegiatan/*
+assets/uploads/bukti/*
+!assets/uploads/kegiatan/.gitkeep
+!assets/uploads/bukti/.gitkeep
